@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Rice Disease Advisory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1995/1995485.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Rice Disease Advisory</h1>
+
+        <div class="chat-section">
+            <div class="chat-window" id="chatHistory"></div>
+            <div class="chat-input-container">
+                <div class="chat-controls">
+                    <textarea 
+                        id="chatInput" 
+                        class="chat-input" 
+                        placeholder="Nhập câu hỏi hoặc mô tả của bạn về bệnh cây lúa..." 
+                        rows="1"
+                    ></textarea>
+                    <label for="chatFileInput" class="file-upload-button">
+                        <img src="upload-icon.png" alt="Upload ảnh" />
+                        <input 
+                            type="file" 
+                            id="chatFileInput" 
+                            accept="image/*" 
+                            style="display: none;"
+                        />
+                    </label>
+                    <button onclick="sendMessage()">Gửi</button>
+                </div>
+                <div class="image-preview" id="imagePreview"></div>
+                <div class="loader" id="chatLoader"></div>
+                <p class="error-message" id="chatError"></p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made by Group_Nine</p>
+        </footer>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
