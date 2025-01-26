@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('bg.jpg'); /* Link hình ảnh */
-    background-size: cover; /* Đảm bảo hình ảnh phủ kín nền */
-    background-position: center; /* Căn giữa hình ảnh */
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
     color: #1a1a1a;
     line-height: 1.6;
@@ -25,7 +25,7 @@ body {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Header Styles */
+
 h1 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -45,7 +45,6 @@ h1::after {
     border-radius: 2px;
 }
 
-/* Chat Window Styles */
 .chat-section {
     display: flex;
     flex-direction: column;
@@ -93,14 +92,14 @@ h1::after {
 }
 
 .chat-image img {
-    max-width: 200px; /* Thu nhỏ ảnh trong đoạn chat */
+    max-width: 200px; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .chat-image img:hover {
-    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+    transform: scale(1.05); 
 }
 
 /* Input Area Styles */
@@ -133,7 +132,7 @@ h1::after {
     border-color: #3b82f6;
 }
 
-/* Button Styles */
+
 .file-upload-button {
     cursor: pointer;
     background-color: #3b82f6;
@@ -172,7 +171,7 @@ button:hover {
     transform: translateY(-1px);
 }
 
-/* Image Preview Styles */
+
 .preview-container {
     position: relative;
     display: inline-block;
@@ -180,7 +179,7 @@ button:hover {
 }
 
 .preview-container img {
-    max-width: 150px; /* Thu nhỏ ảnh xem trước */
+    max-width: 150px; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -208,7 +207,7 @@ button:hover {
     background-color: #dc2626;
 }
 
-/* Loading Animation */
+
 .loader {
     display: none;
     margin: 20px auto;
@@ -244,7 +243,7 @@ button:hover {
     }
 }
 
-/* Error Message Styles */
+
 .error-message {
     color: #ef4444;
     text-align: center;
@@ -255,7 +254,7 @@ button:hover {
     display: none;
 }
 
-/* Footer Styles */
+
 footer {
     text-align: center;
     margin-top: 30px;
@@ -265,7 +264,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -284,10 +283,10 @@ footer {
     }
 
     .chat-image img {
-        max-width: 150px; /* Thu nhỏ ảnh hơn trên thiết bị di động */
+        max-width: 150px; 
     }
 
     .preview-container img {
-        max-width: 100px; /* Thu nhỏ ảnh xem trước trên thiết bị di động */
+        max-width: 100px; 
     }
 }

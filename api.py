@@ -27,17 +27,17 @@ class_names = [
     'bệnh đốm nâu hẹp', 'bệnh đạo ôn cổ bông', 'bệnh bọ gai', 'bệnh khô vằn', 'bệnh tungro'
 ]
 
-# Khởi tạo mô hình LLM
+
 MODEL_PATH = "lua_model.gguf"
 llm = Llama(model_path=MODEL_PATH, n_ctx=2048)
 
-# Khởi tạo FastAPI
+
 app = FastAPI()
 
 class Message(BaseModel):
     role: str
     content: str
-    imageData: Optional[str] = None  # Thêm trường để lưu dữ liệu ảnh
+    imageData: Optional[str] = None  
 
 class ChatRequest(BaseModel):
     messages: List[Message]
@@ -48,7 +48,7 @@ class PredictionResponse(BaseModel):
     prediction: str
     confidence: float
 
-# Tạo prompt dựa trên kết quả dự đoán
+
 def create_disease_prompt(disease_name: str) -> str:
     return f"""
     Bệnh lúa được phát hiện: {disease_name}
@@ -59,7 +59,6 @@ def create_disease_prompt(disease_name: str) -> str:
     4. Các lưu ý quan trọng khi điều trị
     """
 
-# Tạo prompt từ tin nhắn và kết quả dự đoán
 def create_prompt(messages: List[Message], prediction: Optional[str] = None) -> str:
     prompt = ""
     for msg in messages:
@@ -78,7 +77,6 @@ app.add_middleware(
     allow_headers=['*'],
 )
 
-# API dự đoán bệnh lúa
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
     try:
@@ -105,7 +103,6 @@ async def predict(file: UploadFile = File(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# API chat
 @app.post("/chat/")
 async def chat(chat_request: ChatRequest):
     try:
@@ -113,7 +110,6 @@ async def chat(chat_request: ChatRequest):
         prompt = ""
 
         if hasattr(last_message, 'imageData') and last_message.imageData:
-            # Nếu có ảnh, thực hiện dự đoán
             image_data = base64.b64decode(last_message.imageData.split(',')[1])
             prediction_result = await predict(UploadFile(
                 file=io.BytesIO(image_data),
@@ -121,13 +117,10 @@ async def chat(chat_request: ChatRequest):
             ))
             
             if last_message.content.strip():
-                # Nếu có cả text và ảnh
                 prompt = create_prompt(chat_request.messages, prediction_result["prediction"])
             else:
-                # Nếu chỉ có ảnh
                 prompt = create_disease_prompt(prediction_result["prediction"])
         else:
-            # Nếu chỉ có text
             prompt = create_prompt(chat_request.messages)
 
         response = llm(
