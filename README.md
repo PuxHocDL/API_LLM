@@ -43,29 +43,37 @@ Ensure you have the following installed:
    cd Rice-Leaves-Assistant-For-Farmers
    ```
 
-3. Create a virtual environment:
+3. Download the required model files:
+   - Visit [Hugging Face](https://huggingface.co/PuxAI/AI002) to download the following files:
+     - The fine-tuned Vietnamese LLM model (quantized in gguf format).
+     - The CNN classification model.
+   - Place the downloaded files in the project (Rice-Leaves-Assistant-For-Farmers).
+
+4. Create a virtual environment:
    ```bash
    python -m venv <your_virtual_env_name>
    ```
 
-4. Activate the virtual environment and install the required dependencies:
+5. Activate the virtual environment and install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-5. Start the backend server:
+6. Start the backend server:
    ```bash
    uvicorn api:app --reload
    ```
 
-6. Open the frontend file `index.html` in your browser to use the chatbot.
+7. Open the frontend file `index.html` in your browser to use the chatbot.
+
 
 ---
 
 ## How to Use
-1. Upload images of diseased rice leaves to get an instant diagnosis.
-2. Input your queries in Vietnamese to receive textual advice from the chatbot.
-3. Leverage the integration of image and text models for comprehensive support.
+1. Download and set up the model files as instructed.
+2. Upload images of diseased rice leaves to get an instant diagnosis.
+3. Input your queries in Vietnamese to receive textual advice from the chatbot.
+4. Leverage the integration of image and text models for comprehensive support.
 
 ---
 
