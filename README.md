@@ -53,6 +53,7 @@ Ensure you have the following installed:
 
 5. Activate the virtual environment and install the required dependencies:
    ```bash
+   <your_virtual_env_name>\Scripts\activate
    pip install -r requirements.txt
    ```
 
