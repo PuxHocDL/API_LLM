@@ -1,4 +1,4 @@
-# Rice Plant Assistant for Farmers
+# Rice Plant Assistant for Farmers (CPU version) 
 
 **Rice Plant Assistant for Farmers** is an innovative application designed to support Vietnamese farmers by providing quick and reliable advice about their farmland via a multi-model chatbot. The system leverages advanced technologies to deliver tailored solutions for agriculture, addressing the unique needs of farmers in Vietnam.
 
@@ -19,7 +19,7 @@ To address this challenge, we propose a Vietnamese web-based multi-model chatbot
 - **Chatbot Interaction:** Demonstrates how the chatbot provides advice based on textual inputs.
 - **Disease Classification:** Showcases the image-based disease classification model in action.
 - **Screenshots and Videos:**
-  - Add relevant screenshots or videos here to illustrate the application in use.
+![Chatbot Example](https://github.com/PuxHocDL/Rice-Leaves-Assistant-For-Farmers/blob/main/Picture/demo1.jpg)
 
 ---
 
