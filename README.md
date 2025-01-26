@@ -27,7 +27,7 @@ To address this challenge, we propose a Vietnamese web-based multi-model chatbot
 
 ### Prerequisites
 Ensure you have the following installed:
-- **Python 3.7 or later**
+- **Python 3.10 or later**
 - **Pip**
 - **Uvicorn**
 
@@ -75,4 +75,4 @@ We welcome contributions to improve this project! If you have suggestions for ne
 ---
 
 ## Contact
-For questions or feedback, please contact us at [exampleemail@gmail.com](mailto:exampleemail@gmail.com).
+For questions or feedback, please contact us at [nguyenxuanphuc010205@gmail.com](mailto:nguyenxuanphuc010205@gmail.com).
