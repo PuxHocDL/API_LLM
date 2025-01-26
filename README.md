@@ -15,10 +15,7 @@ To address this challenge, we propose a Vietnamese web-based multi-model chatbot
 
 ---
 
-## Demo
-- **Chatbot Interaction:** Demonstrates how the chatbot provides advice based on textual inputs.
-- **Disease Classification:** Showcases the image-based disease classification model in action.
-- **Screenshots and Videos:**
+## Screenshots and Videos
 ![Chatbot Example](https://github.com/PuxHocDL/Rice-Leaves-Assistant-For-Farmers/blob/main/Picture/demo1.jpg)
 
 ---
