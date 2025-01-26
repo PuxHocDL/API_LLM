@@ -12,13 +12,13 @@ from typing import List, Optional
 from torchvision import transforms
 import base64
 
-# Khởi tạo mô hình ResNet-152
+
 model = models.resnet152(weights=None)
 model.fc = torch.nn.Linear(model.fc.in_features, 10)
 
-# Load checkpoint
+
 checkpoint_dir = "resnet152.pt"
-checkpoint = torch.load(checkpoint_dir, weights_only=True)
+checkpoint = torch.load(checkpoint_dir, map_location=torch.device('cpu'))
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
